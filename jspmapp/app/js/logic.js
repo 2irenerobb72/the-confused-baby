@@ -4,35 +4,18 @@ const R = require('ramda')
 const board = require('./lib/board')
 
 
-const movePawn = (color, board) => {
-  const move = 'Pn'
+const makeMove = (board, piece, to, from) => {
+  if (board.length === 8) {
+  }
+  return piece.from(row === 0, col === 0)piece.to(row === 1, col === 1)
 }
 
-const moveRook = (color) => {
-
+const checkIfOccupied = () => {
 }
 
-const moveKnight = (color) => {
-
-}
-
-const moveBishop = (color) => {
-
-}
-
-const moveQueen = (color) => {
-
-}
-
-const moveKing = (color) => {
-
+const findEmptySpace = (board) => {
 }
 
 module.exports = {
-  movePawn: movePawn,
-  moveRook: moveRook,
-  moveKnight: moveKnight,
-  moveBishop: moveBishop,
-  moveQueen: moveQueen,
-  moveKing: moveKing
+  makeMove: makeMove
 }

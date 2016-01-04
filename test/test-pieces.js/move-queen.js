@@ -7,12 +7,12 @@ const overwriteDb = require('./helper').overwriteDb
 describe('move queen', () => {
   beforeEach(() => {overwriteDb('empty')})
   xit('move queen in a legal way', () => {
-    logic.makeQueen('Qn', color)
+    logic.makeMove('Qn', color)
     expect(db.read().board[][])
   })
   xit('move queen in a illegal way', () => {
     let originalBoard = db.read().board
-    logic.makeQueen('Qn', color)
+    logic.makeMove('Qn', color)
     expect(_.isEqual(db.read().board, originalBoard)).to.equal(true)
   })
 })

@@ -7,12 +7,12 @@ const overwriteDb = require('./helper').overwriteDb
 describe('moves Rook', (color, piece) => {
   beforeEach(() => {overwriteDb('empty')})
   xit('moves Rook in a legal way', () => {
-    logic.makeRook('Rk', color)
+    logic.makeMove('Rk', color)
     expect(db.read().board[][])
   })
   xit('moves Rook in an illegal way', () => {
     let originalBoard = db.read().board
-    logic.moveRook('Rk', color)
+    logic.moveMove('Rk', color)
     expect(_.isEqual(db.read().board, originalBoard).to.equal(true)
   })
 })
