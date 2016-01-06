@@ -15,16 +15,19 @@ const placePiece = (board, piece, to) => {
   return board
 }
 
-const checkIfOccupied = (board, piece, otherPiece, to, from) => {
-  piece = board[from[0]][from[0]]
-  board[from[0]][from[0]] = '   '
-  otherPiece = board[from[0]][from[2]]
-  board[from[0]][from[2]] = '   '
-  return placePiece(board, piece, to)
+const checkIfOccupied = (board, place) => {
+  return board.makeStartingBoard(place === [0,1]) || board.makeStartingBoard(place !== [0,1]) ? true : false
+}
+
+const checkRoute = (board, place) => {
+  return board.makeStartingBoard(place) || board.makeStartingBoard(place) ? true : false
+}
+
+const testForHomeRow = (board, place, piece) => {
+  return board.makeStartingBoard(place === [0,0]) || board.makeStartingBoard(place === [8,8]) ? true : false
 }
 
 module.exports = {
   makeMove: makeMove,
   placePiece: placePiece
 }
-
