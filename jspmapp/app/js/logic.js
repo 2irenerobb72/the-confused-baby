@@ -19,29 +19,40 @@ const checkIfOccupied = (board, place) => {
   return board[place[0]][place[1]] = '   ' ? true : false
 }
 
-const testPawn = (board, from, to) => {
-  let makeMove = [from[1]][from[0]]
-  return board
+const testPawn = (board, piece, from, to) => {
+  board[to[0]][to[1]] = piece
+  board[from[0]][from[1]] = '   '
+  return true
 }
 
 const testRook = (board, place) => {
-  return ? true : false
+  board[to[]][to[]] = piece
+  board[from[]][from[]] = '   '
+  return true
   }
 
 const testKnight = () => {
-  return board[place[0]]
+  board[to[]][to[]] = piece
+  board[from[]][from[]] = '   '
+  return true
 }
 
 const testBishop = () => {
-
+board[to[]][to[]] = piece
+  board[from[]][from[]] = '   '
+  return true
 }
 
 const testQueen = () => {
-
+board[to[]][to[]] = piece
+  board[from[]][from[]] = '   '
+  return true
 }
 
 const testKing = () => {
-
+board[to[]][to[]] = piece
+  board[from[]][from[]] = '   '
+  return true
 }
 
 // const checkRoute = (board, place, from, to) => {
