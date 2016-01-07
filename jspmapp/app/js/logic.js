@@ -16,18 +16,45 @@ const placePiece = (board, piece, to) => {
 }
 
 const checkIfOccupied = (board, place) => {
-  return board.makeStartingBoard(place === [0,1]) || board.makeStartingBoard(place !== [0,1]) ? true : false
+  return board[place[0]][place[1]] = '   ' ? true : false
 }
 
-const checkRoute = (board, place) => {
-  return board.makeStartingBoard(place) || board.makeStartingBoard(place) ? true : false
+const testPawn = (board, from, to) => {
+  let makeMove = [from[1]][from[0]]
+  return board
 }
 
-const testForHomeRow = (board, place, piece) => {
-  return board.makeStartingBoard(place === [0,0]) || board.makeStartingBoard(place === [8,8]) ? true : false
+const testRook = (board, place) => {
+  return board[place[0]][place[1]] || board[place[2]][place[1]] = '   ' ? true : false
+  }
+
+const testKnight = () => {
+
 }
+
+const testBishop = () => {
+
+}
+
+const testQueen = () => {
+
+}
+
+const testKing = () => {
+
+}
+
+// const checkRoute = (board, place, from, to) => {
+//   return board[place[2]][place[2]] = '   ' && board[from[2]][from[0]] = piece ? true : false
+// }
+
+// const testForHomeRow = (board, place, piece) => {
+//  return board[place[0][place[0]] = '   ' || board[place[8]][place[8]] = piece ? true : false
+// }
 
 module.exports = {
   makeMove: makeMove,
-  placePiece: placePiece
+  placePiece: placePiece,
+  checkIfOccupied: checkIfOccupied,
+  testPawn: testPawn
 }
