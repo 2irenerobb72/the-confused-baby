@@ -25,11 +25,11 @@ const testPawn = (board, from, to) => {
 }
 
 const testRook = (board, place) => {
-  return board[place[0]][place[1]] || board[place[2]][place[1]] = '   ' ? true : false
+  return ? true : false
   }
 
 const testKnight = () => {
-
+  return board[place[0]]
 }
 
 const testBishop = () => {

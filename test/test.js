@@ -81,4 +81,48 @@ describe('moves rook', () => {
 })
 
 
+describe('moves knight', () => {
+  it('moves knight in a legal way', () => {
+    currentBoard = logic.placePiece(board.buildBoard(), 'WKt', [1,0])
+    expect(logic.testRook(currentBoard, 'WKt', [0,0], [3,0])[3][0]).to.equal('WKt')
+  })
+  it('moves knight in a illegal way', () => {
+    currentBoard = logic.placePiece(board.buildBoard(), 'WKt', [1,0])
+    expect(logic.testRook(currentBoard, 'WKt', [1,0], [2,1])[2][1]).to.equal(false)
+  })
+})
 
+
+describe('moves bishop', () => {
+  it('moves bishop in a legal way', () => {
+    currentBoard = logic.placePiece(board.buildBoard(), 'WBp', [1,0])
+    expect(logic.testRook(currentBoard, 'WBp', [0,0], [3,0])[3][0]).to.equal('WBp')
+  })
+  it('moves bishop in a illegal way', () => {
+    currentBoard = logic.placePiece(board.buildBoard(), 'WBp', [1,0])
+    expect(logic.testRook(currentBoard, 'WBp', [1,0], [2,1])[2][1]).to.equal(false)
+  })
+})
+
+describe('moves queen', () => {
+  it('moves queen in a legal way', () => {
+    currentBoard = logic.placePiece(board.buildBoard(), 'WQn', [1,0])
+    expect(logic.testRook(currentBoard, 'WQn', [0,0], [3,0])[3][0]).to.equal('WQn')
+  })
+  it('moves queen in a illegal way', () => {
+    currentBoard = logic.placePiece(board.buildBoard(), 'WQn', [1,0])
+    expect(logic.testRook(currentBoard, 'WQn', [1,0], [2,1])[2][1]).to.equal(false)
+  })
+})
+
+
+describe('moves king', () => {
+  it('moves king in a legal way', () => {
+    currentBoard = logic.placePiece(board.buildBoard(), 'WKg', [1,0])
+    expect(logic.testRook(currentBoard, 'WBp', [0,0], [3,0])[3][0]).to.equal('WBp')
+  })
+  it('moves king in a illegal way', () => {
+    currentBoard = logic.placePiece(board.buildBoard(), 'WKg', [1,0])
+    expect(logic.testRook(currentBoard, 'WKg', [1,0], [2,1])[2][1]).to.equal(false)
+  })
+})
