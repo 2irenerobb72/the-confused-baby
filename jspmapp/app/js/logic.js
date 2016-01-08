@@ -34,25 +34,25 @@ const testRook = (board, piece, from, to) => {
 const testKnight = (board, piece, from, to) => {
   board[to[0]][to[1]] = piece
   board[from[0]][from[1]] = '   '
-  return true
+  return board
 }
 
 const testBishop = (board, piece, from, to) => {
 board[to[0]][to[1]] = piece
   board[from[0]][from[1]] = '   '
-  return true
+  return board
 }
 
 const testQueen = () => {
 board[to[0]][to[1]] = piece
   board[from[0]][from[1]] = '   '
-  return true
+  return board
 }
 
 const testKing = () => {
 board[to[0]][to[1]] = piece
   board[from[0]][from[1]] = '   '
-  return true
+  return board
 }
 
 // const checkRoute = (board, place, from, to) => {

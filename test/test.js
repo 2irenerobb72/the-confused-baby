@@ -82,9 +82,9 @@ describe('moves rook', () => {
 
 
 describe('moves knight', () => {
-  xit('moves knight in a legal way', () => {
+  it('moves knight in a legal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WKt', [1,0])
-    expect(logic.testRook(currentBoard, 'WKt', [0,0], [2,1])).to.equal(true)
+    expect(logic.testRook(currentBoard, 'WKt', [0,0], [2,1])[2][1]).to.equal('WKt')
   })
   xit('moves knight in a illegal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WKt', [1,0])
@@ -94,9 +94,9 @@ describe('moves knight', () => {
 
 
 describe('moves bishop', () => {
-  xit('moves bishop in a legal way', () => {
+  it('moves bishop in a legal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WBp', [1,0])
-    expect(logic.testRook(currentBoard, 'WBp', [0,0], [3,3])).to.equal(true)
+    expect(logic.testRook(currentBoard, 'WBp', [0,0], [3,3])[3][3]).to.equal('WBp')
   })
   xit('moves bishop in a illegal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WBp', [1,0])
@@ -105,9 +105,9 @@ describe('moves bishop', () => {
 })
 
 describe('moves queen', () => {
-  xit('moves queen in a legal way', () => {
+  it('moves queen in a legal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WQn', [1,0])
-    expect(logic.testRook(currentBoard, 'WQn', [0,0], [2,1])).to.equal(true)
+    expect(logic.testRook(currentBoard, 'WQn', [0,0], [3,3])[3][3]).to.equal('WQn')
   })
   xit('moves queen in a illegal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WQn', [1,0])
@@ -117,9 +117,9 @@ describe('moves queen', () => {
 
 
 describe('moves king', () => {
-  xit('moves king in a legal way', () => {
+  it('moves king in a legal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WKg', [1,0])
-    expect(logic.testRook(currentBoard, 'WBp', [0,0], [0,1])).to.equal(true)
+    expect(logic.testRook(currentBoard, 'WKg', [0,0], [0,1])[0][1]).to.equal('WKg')
   })
   xit('moves king in a illegal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WKg', [1,0])
