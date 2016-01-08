@@ -1,12 +1,12 @@
 'use strict'
-const R = require('ramda')
-
+import R from 'ramda'
+import $ from 'jquery'
 
 
 const buildBoard = () => {
   const initial = new Array(8).fill('')
   const board = initial.map((cell) => {
-    return new Array(8).fill('   ')
+    return new Array(8).fill('x')
   })
   return board
 }
@@ -38,10 +38,12 @@ const makeStartingBoard = (board) => {
    return board
 }
 
-
-console.log(makeStartingBoard(buildBoard()))
-
-module.exports = {
-  makeStartingBoard: makeStartingBoard,
-  buildBoard: buildBoard
+const renderBoard = (board) => {
+  for (let i = 0; i < board.length; i++) {
+    for (let j = 0; j < board.length; j++) {
+      $('#board').append('<div class="' + board[i][j] + '">' + board[i][j] + '')
+    }
+  }
 }
+
+export {buildBoard, makeStartingBoard, renderBoard}
