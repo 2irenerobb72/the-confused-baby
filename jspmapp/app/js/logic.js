@@ -25,33 +25,33 @@ const testPawn = (board, piece, from, to) => {
   return true
 }
 
-const testRook = (board, place) => {
-  board[to[]][to[]] = piece
-  board[from[]][from[]] = '   '
+const testRook = (board, piece, from, to) => {
+  board[to[0]][to[1]] = piece
+  board[from[0]][from[1]] = '   '
   return true
   }
 
-const testKnight = () => {
-  board[to[]][to[]] = piece
-  board[from[]][from[]] = '   '
+const testKnight = (board, piece, from, to) => {
+  board[to[0]][to[1]] = piece
+  board[from[0]][from[1]] = '   '
   return true
 }
 
-const testBishop = () => {
-board[to[]][to[]] = piece
-  board[from[]][from[]] = '   '
+const testBishop = (board, piece, from, to) => {
+board[to[0]][to[1]] = piece
+  board[from[0]][from[1]] = '   '
   return true
 }
 
 const testQueen = () => {
-board[to[]][to[]] = piece
-  board[from[]][from[]] = '   '
+board[to[0]][to[1]] = piece
+  board[from[0]][from[1]] = '   '
   return true
 }
 
 const testKing = () => {
-board[to[]][to[]] = piece
-  board[from[]][from[]] = '   '
+board[to[0]][to[1]] = piece
+  board[from[0]][from[1]] = '   '
   return true
 }
 
