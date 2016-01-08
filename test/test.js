@@ -62,7 +62,7 @@ describe('test if pawn is on home row', () => {
 describe('moves pawn', () => {
   it('moves pawn in a legal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WPn', [1,0])
-    expect(logic.testPawn(currentBoard, 'WPn', [1,0], [2,0])).to.equal(true)
+    expect(logic.testPawn(currentBoard, 'WPn', [1,0], [2,0])[2][0]).to.equal('WPn')
   })
   xit('moves pawn in a illegal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WPn', [])
@@ -84,7 +84,7 @@ describe('moves rook', () => {
 describe('moves knight', () => {
   xit('moves knight in a legal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WKt', [1,0])
-    expect(logic.testRook(currentBoard, 'WKt', [0,0], [3,0])[3][0]).to.equal('WKt')
+    expect(logic.testRook(currentBoard, 'WKt', [0,0], [2,1])).to.equal(true)
   })
   xit('moves knight in a illegal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WKt', [1,0])
@@ -96,7 +96,7 @@ describe('moves knight', () => {
 describe('moves bishop', () => {
   xit('moves bishop in a legal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WBp', [1,0])
-    expect(logic.testRook(currentBoard, 'WBp', [0,0], [3,0])[3][0]).to.equal('WBp')
+    expect(logic.testRook(currentBoard, 'WBp', [0,0], [3,3])).to.equal(true)
   })
   xit('moves bishop in a illegal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WBp', [1,0])
@@ -107,11 +107,11 @@ describe('moves bishop', () => {
 describe('moves queen', () => {
   xit('moves queen in a legal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WQn', [1,0])
-    expect(logic.testRook(currentBoard, 'WQn', [0,0], [3,0])[3][0]).to.equal('WQn')
+    expect(logic.testRook(currentBoard, 'WQn', [0,0], [2,1])).to.equal(true)
   })
   xit('moves queen in a illegal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WQn', [1,0])
-    expect(logic.testRook(currentBoard, 'WQn', [1,0], [2,1])[2][1]).to.equal(false)
+    expect(logic.testRook(currentBoard, 'WQn', [1,0], [2,1])).to.equal(false)
   })
 })
 
@@ -119,7 +119,7 @@ describe('moves queen', () => {
 describe('moves king', () => {
   xit('moves king in a legal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WKg', [1,0])
-    expect(logic.testRook(currentBoard, 'WBp', [0,0], [3,0])[3][0]).to.equal('WBp')
+    expect(logic.testRook(currentBoard, 'WBp', [0,0], [0,1])).to.equal(true)
   })
   xit('moves king in a illegal way', () => {
     currentBoard = logic.placePiece(board.buildBoard(), 'WKg', [1,0])

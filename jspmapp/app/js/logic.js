@@ -22,13 +22,13 @@ const checkIfOccupied = (board, place) => {
 const testPawn = (board, piece, from, to) => {
   board[to[0]][to[1]] = piece
   board[from[0]][from[1]] = '   '
-  return true
+  return board
 }
 
 const testRook = (board, piece, from, to) => {
   board[to[0]][to[1]] = piece
   board[from[0]][from[1]] = '   '
-  return true
+  return board
   }
 
 const testKnight = (board, piece, from, to) => {
@@ -67,5 +67,9 @@ module.exports = {
   makeMove: makeMove,
   placePiece: placePiece,
   checkIfOccupied: checkIfOccupied,
-  testPawn: testPawn
+  testPawn: testPawn,
+  testRook: testRook,
+  testBishop: testBishop,
+  testQueen: testQueen,
+  testKing: testKing
 }
