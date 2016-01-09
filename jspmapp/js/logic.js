@@ -5,9 +5,11 @@ import board from './board'
 
 const makeMove = (board, piece, from, to) => {
   piece = board[from[0]][from[1]]
-  board[from[0]][from[1]] = '   '
+  board[from[0]][from[1]] = 'x'
   return placePiece(board, piece, to)
 }
+
+
 
 const placePiece = (board, piece, to) => {
   board[to[0]][to[1]] = piece
@@ -55,7 +57,7 @@ const testKing = () => {
 }
 
 const checkRoute = (board, place, to) => {
-  board[from[0]][from][1]] = piece
+  board[from[0]][from[1]] = piece
   return placePiece(board, piece, to)
 }
 
@@ -64,15 +66,4 @@ const testForHomeRow = (board, piece, to) => {
   return board
 }
 
-module.exports = {
-  makeMove: makeMove,
-  placePiece: placePiece,
-  checkIfOccupied: checkIfOccupied,
-  testForHomeRow: testForHomeRow,
-  checkRoute: checkRoute,
-  testPawn: testPawn,
-  testRook: testRook,
-  testBishop: testBishop,
-  testQueen: testQueen,
-  testKing: testKing
-}
+export { makeMove }

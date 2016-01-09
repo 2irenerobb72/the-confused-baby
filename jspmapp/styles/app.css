@@ -1,33 +1,62 @@
-/*// var pieces = {
-//   NONE : {name: "None", code: ""}
-//   WHITE_KING : {name: "White King", code: "&#9812;"}
-//   WHITE_QUEEN : {name: "White Queen", code: "&#9813;"}
-//   WHITE_ROOK : {name: "White Rook", code: "&#9814;"}
-//   WHITE_BISHOP: {name: "White Bishop", code: "&#9815;"}
-//   WHITE_KNIGHT : {name: "White Knight", code: "&#9816;"}
-//   WHITE_PAWN : {name: "White Pawn", code: "&#9817;"}
-//   BLACK_KING : {name: "Black King", code: "&#9818;"}
-//   BLACK_QUEEN : {name: "Black Queen", code: "&#9819;"}
-//   BLACK_ROOK : {name: "Black Rook", code: "&#9820;"}
-//   BLACK_BISHOP : {name: "Black Bishop", code: "&#9821;"}
-//   BLACK_KNIGHT : {name: "Black Knight", code: "&#9822;"}
-//   BLACK_PAWN : {name: "Black Pawn", code: "&#9823;"}
-//
-// }
-*/
+.WKg, .WQn, .WRk, .WBp, .WKt, .WPn, .BKg, .BQn, .BRk, .BBp, .BKt, .BPn {
+  color: #000 !important
+}
 
 
+.button {
+    position: absolute;
+}
 
     #board {
       border: 1px solid #eee;
       margin: 50px auto;
       width: 500px;
+      position:relative;
     }
 
-    #board > div {
+    #board > .square {
       margin: 0;
       border: 1px solid black;
       width: 12%;
-      height: 50px;
-      display:inline-block
+      height:50px;
+      line-height: 50px;
+      display:inline-block;
+      text-align: center;
+      font-size:36px;
     }
+    .empty {
+      color: white;
+    }
+    #board > .square:nth-child(-2n+8),
+#board > .square:nth-child(8) ~ div:nth-child(-2n+15),
+#board > .square:nth-child(16) ~ div:nth-child(-2n+24),
+#board > .square:nth-child(24) ~ div:nth-child(-2n+31),
+#board > .square:nth-child(32) ~ div:nth-child(-2n+40),
+#board > .square:nth-child(40) ~ div:nth-child(-2n+47),
+#board > .square:nth-child(48) ~ div:nth-child(-2n+56),
+#board > .square:nth-child(56) ~ div:nth-child(-2n+63)  {
+      background-color: #eee;
+      color: #eee
+    }
+
+    #board > .square:nth-child(-2n+8),
+#board > .square:nth-child(8) ~ div:nth-child(-2n+15) .empty,
+#board > .square:nth-child(16) ~ div:nth-child(-2n+24) .empty,
+#board > .square:nth-child(24) ~ div:nth-child(-2n+31) .empty,
+#board > .square:nth-child(32) ~ div:nth-child(-2n+40) .empty,
+#board > .square:nth-child(40) ~ div:nth-child(-2n+47) .empty,
+#board > .square:nth-child(48) ~ div:nth-child(-2n+56) .empty,
+#board > .square:nth-child(56) ~ div:nth-child(-2n+63)  .empty{
+      background-color: #eee;
+      color: #eee
+    }
+
+.from {
+  border-color: blue !important;
+  box-shadow: inset 1px 1px 10px blue !important;
+}
+
+.to {
+  border-color: green !important;
+  box-shadow: inset 1px 1px 10px green !important;
+}
