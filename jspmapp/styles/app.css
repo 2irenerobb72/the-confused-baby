@@ -7,14 +7,14 @@
     position: absolute;
 }
 
-    #board {
+    .board {
       border: 1px solid #eee;
       margin: 50px auto;
       width: 500px;
       position:relative;
     }
 
-    #board > .square {
+    .board > .square {
       margin: 0;
       border: 1px solid black;
       width: 12%;
@@ -27,26 +27,26 @@
     .empty {
       color: white;
     }
-    #board > .square:nth-child(-2n+8),
-#board > .square:nth-child(8) ~ div:nth-child(-2n+15),
-#board > .square:nth-child(16) ~ div:nth-child(-2n+24),
-#board > .square:nth-child(24) ~ div:nth-child(-2n+31),
-#board > .square:nth-child(32) ~ div:nth-child(-2n+40),
-#board > .square:nth-child(40) ~ div:nth-child(-2n+47),
-#board > .square:nth-child(48) ~ div:nth-child(-2n+56),
-#board > .square:nth-child(56) ~ div:nth-child(-2n+63)  {
+    .board > .square:nth-child(-2n+8),
+.board > .square:nth-child(8) ~ div:nth-child(-2n+15),
+.board > .square:nth-child(16) ~ div:nth-child(-2n+24),
+.board > .square:nth-child(24) ~ div:nth-child(-2n+31),
+.board > .square:nth-child(32) ~ div:nth-child(-2n+40),
+.board > .square:nth-child(40) ~ div:nth-child(-2n+47),
+.board > .square:nth-child(48) ~ div:nth-child(-2n+56),
+.board > .square:nth-child(56) ~ div:nth-child(-2n+63)  {
       background-color: #eee;
       color: #eee
     }
 
-    #board > .square:nth-child(-2n+8),
-#board > .square:nth-child(8) ~ div:nth-child(-2n+15) .empty,
-#board > .square:nth-child(16) ~ div:nth-child(-2n+24) .empty,
-#board > .square:nth-child(24) ~ div:nth-child(-2n+31) .empty,
-#board > .square:nth-child(32) ~ div:nth-child(-2n+40) .empty,
-#board > .square:nth-child(40) ~ div:nth-child(-2n+47) .empty,
-#board > .square:nth-child(48) ~ div:nth-child(-2n+56) .empty,
-#board > .square:nth-child(56) ~ div:nth-child(-2n+63)  .empty{
+    .board > .square:nth-child(-2n+8) .empty,
+.board > .square:nth-child(8) ~ div:nth-child(-2n+15) .empty,
+.board > .square:nth-child(16) ~ div:nth-child(-2n+24) .empty,
+.board > .square:nth-child(24) ~ div:nth-child(-2n+31) .empty,
+.board > .square:nth-child(32) ~ div:nth-child(-2n+40) .empty,
+.board > .square:nth-child(40) ~ div:nth-child(-2n+47) .empty,
+.board > .square:nth-child(48) ~ div:nth-child(-2n+56) .empty,
+.board > .square:nth-child(56) ~ div:nth-child(-2n+63)  .empty{
       background-color: #eee;
       color: #eee
     }
