@@ -49,50 +49,29 @@ var transpose = a => {
 }
 
 const checkLeftDiagonal = (board, from, to) => {
-    var diag1 = [], diag2 = [], reversed, row
-    for (let x = array[0].length - 1; x >= 0; x--) {
-        row = 0
-        reversed = []
-        for (let z = x; z < array[0].length && row < 8; z++){
-            reversed.push(array[row][z])
-            row++
-        }
-        diagArray1.push(reversed)
+  for (let x = from[1]+1; x < to[1] ; x--) {
+    if(board[from[0]][i] != 'x')
+    for (let z = x; z ; z++) {
     }
-    for (let x = 8; x >= 0; x--) {
-        row = 7
-        reversed = []
-        for (let z = x; z >= 0 && row >= 0; z--) {
-            reversed.push(array[row][z])
-            row--
-        }
-        diagArray2.push(reversed.reverse())
+  }
+  for (let x = 8; x >= 0; x-- ) {
+    for (let z = x; z >= 0; z--) {
     }
-    return R.union(diagArray1, diagArray2)
+  }
 }
 
 const checkRightDiagonal = (board, from, to) => {
-    var diagArray1 = [], diagArray2 = [], reversed, row
-    for (let x = 0; x < array[0].length; x++) {
-        row = 0
-        reversed = []
-        for (let z = x; z >= 0 && row < 8; z--){
-            reversed.push(array[row][z])
-            row++
-        }
-        diagArray1.push(reversed)
+  for (let x = 0; x ; x++) {
+    for (let z = x; z >= 0 ; z--) {
+
     }
-    for (let x = 0; x < array[0].length; x++) {
-        row = 7
-        reversed = []
-        for (let z = x; z < array[0].length && row >= 0; z++) {
-            reversed.push(array[row][z])
-            row--
-        }
-        diagArray2.push(reversed.reverse())
+  }
+  for (let x = 0; x ; x++) {
+    for (let z = x; z ; z++) {
     }
-    return R.union(diagArray1, diagArray2)
+  }
 }
+
 const checkRoute = (board, place, to) => {
 
 }

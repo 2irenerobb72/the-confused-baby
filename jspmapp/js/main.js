@@ -5,8 +5,6 @@ import {makeMove} from './logic.js'
 var board = makeStartingBoard(buildBoard())
 renderBoard(board)
 
-
-
 $('.btn-restart').on('click', function(e){
   board = makeStartingBoard(buildBoard())
   renderNew(board)
@@ -57,11 +55,6 @@ const pieces = {
   BKt : {name: "Black Knight", code: "&#9822;"},
   BPn : {name: "Black Pawn", code: "&#9823;"}
  }
-
-
-
-
-
 
 // $('btn-restart').on('click', board.start)
 //

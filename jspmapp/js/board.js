@@ -2,7 +2,6 @@
 import R from 'ramda'
 import $ from 'jquery'
 
-
 const buildBoard = () => {
   const initial = new Array(8).fill('')
   const board = initial.map((cell) => {
@@ -63,6 +62,5 @@ const pieces = {
   BKt : {name: "Black Knight", code: "&#9822;"},
   BPn : {name: "Black Pawn", code: "&#9823;"}
  }
-
 
 export {buildBoard, makeStartingBoard, renderBoard}
