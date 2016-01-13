@@ -2,6 +2,17 @@ import $ from 'jquery'
 import {makeStartingBoard, buildBoard, renderBoard} from './board.js'
 import {makeMove} from './logic.js'
 
+// var setEventHandlers = function() {
+//   socket.sockets.on("connection", onSocketConnection)
+// }
+
+$('#new-game').on('submit', (e) => {
+  e.preventDefault()
+  let gameName = $('#new-game input[name=name]').val()
+  $.post('http://localhost:3000/games', {name: gameName})
+
+})
+
 var board = makeStartingBoard(buildBoard())
 renderBoard(board)
 
@@ -56,19 +67,5 @@ const pieces = {
   BPn : {name: "Black Pawn", code: "&#9823;"}
  }
 
-// $('btn-restart').on('click', board.start)
-//
-// $('btn-restart').on("click", "input[type='reset']", function(){
-//   $("select").trigger("change")
-//   board = makeStartingBoard(buildBoard())
-//   makeNew(board)
-// })
-//
-// $('space').on('click', function(){
-//   board = makeMove(piece, color)
-//   fromSquare = onClick
-//   toOtherSquare = onOtherClick
-// })
-
-let fromSpace,
-    toSpace
+ let fromSpace,
+     toSpace

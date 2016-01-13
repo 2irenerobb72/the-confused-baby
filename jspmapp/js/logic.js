@@ -47,30 +47,30 @@ var transpose = a => {
     } ,a);
   }, R.keys(a[0]));
 }
-
-const checkLeftDiagonal = (board, from, to) => {
-  for (let x = from[1]+1; x < to[1] ; x--) {
-    if(board[from[0]][i] != 'x')
-    for (let z = x; z ; z++) {
-    }
-  }
-  for (let x = 8; x >= 0; x-- ) {
-    for (let z = x; z >= 0; z--) {
-    }
-  }
-}
-
-const checkRightDiagonal = (board, from, to) => {
-  for (let x = 0; x ; x++) {
-    for (let z = x; z >= 0 ; z--) {
-
-    }
-  }
-  for (let x = 0; x ; x++) {
-    for (let z = x; z ; z++) {
-    }
-  }
-}
+//
+// const checkLeftDiagonal = (board, from, to) => {
+//   for (let x = from[1]+1; x < to[1] ; x--) {
+//     if(board[from[0]][i] != 'x')
+//     for (let z = x; z ; z++) {
+//     }
+//   }
+//   for (let x = 8; x >= 0; x-- ) {
+//     for (let z = x; z >= 0; z--) {
+//     }
+//   }
+// }
+//
+// const checkRightDiagonal = (board, from, to) => {
+//   for (let x = 0; x ; x++) {
+//     for (let z = x; z >= 0 ; z--) {
+//
+//     }
+//   }
+//   for (let x = 0; x ; x++) {
+//     for (let z = x; z ; z++) {
+//     }
+//   }
+// }
 
 const checkRoute = (board, place, to) => {
 
