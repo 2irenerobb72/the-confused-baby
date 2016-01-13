@@ -2,9 +2,27 @@ import $ from 'jquery'
 import {makeStartingBoard, buildBoard, renderBoard} from './board.js'
 import {makeMove} from './logic.js'
 
-// var setEventHandlers = function() {
-//   socket.sockets.on("connection", onSocketConnection)
-// }
+//SOCKET ROOMS
+const socket = io.connect('localhost:8000')
+socket.emit('create', 'Lobby')
+var room = $('input').data('room')
+var player = new Player(room, '', '')
+
+socket.once('connect', function () {
+  if (localUser) socket.emit('newUser', localUser)
+
+  socket.on('updateUsers', (data) => {
+    $('#users').test('')
+    socket.emit('join', {room: room})
+  })
+  socket.on('disconnect', (data) => {
+    localUser = undefined$('.cust-modal').show()
+  })
+  socket.on('switchRoom', (room) {
+    socket.emit('switchRoom', room)
+  })
+})
+
 
 $('#new-game').on('submit', (e) => {
   e.preventDefault()

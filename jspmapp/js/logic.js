@@ -1,5 +1,5 @@
 'use strict'
-import storage from './storage'
+
 import R from 'ramda'
 import board from './board'
 
@@ -76,4 +76,4 @@ const checkRoute = (board, place, to) => {
 
 }
 
-export { makeMove }
+export { makeMove, placePiece, checkIfOccupied }
