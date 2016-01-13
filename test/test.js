@@ -1,7 +1,7 @@
 'use strict'
 const expect = require('chai').expect
 const board = require('../jspmapp/app/js/board')
-const logic = require('../jspmapp/app/js/logic')
+const logic = require('../jspmapp/js/logic')
 
 let currentBoard = board.buildBoard()
 
